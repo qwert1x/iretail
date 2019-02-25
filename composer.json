@@ -1,0 +1,19 @@
+{
+  "name": "qwert1x/iretail",
+  "description": "Prototype package for i-retail.com",
+  "authors": [
+    {
+      "name": "Alexey Makarov",
+      "email": "qwert1x@ya.ru"
+    }
+  ],
+  "require": {
+    "php": "^7.1",
+    "guzzlehttp/guzzle": "^6.3"
+  },
+  "autoload": {
+    "psr-4": {
+      "AlexeyMakarov\\IRetail\\": "src"
+    }
+  }
+}
