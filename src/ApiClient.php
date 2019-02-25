@@ -14,7 +14,7 @@ class ApiClient
         $this->http = $client;
         if (null === $client) {
             $this->http = new Client([
-                'base_uri' => 'https://kassa.i-bonus.me/api/cloud-fiscal/order/create',
+                'base_uri' => 'https://beta.i-retail.com/api/cloud-fiscal/order/create',
             ]);
         }
     }
