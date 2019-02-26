@@ -14,7 +14,7 @@ class ApiClient
         $this->http = $client;
         if (null === $client) {
             $this->http = new Client([
-                'base_uri' => 'https://beta.i-retail.com/api/cloud-fiscal/order/create',
+                'base_uri' => 'https://kassa.i-bonus.me/api/cloud-fiscal/order/create',
             ]);
         }
     }
@@ -24,7 +24,7 @@ class ApiClient
         try {
             $response = $this->http->post(
                 '',
-                ['json' => $cash]
+                ['form_params' => json_decode(json_encode($cash))]
             );
             return $response->getBody()->getContents();
         } catch (BadResponseException $e) {

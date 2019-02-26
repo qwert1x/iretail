@@ -2,24 +2,24 @@
 
 require_once('vendor/autoload.php');
 
-$item1 = new \AlexeyMakarov\IRetail\Item('Пополнение баланса', 600.00 , 1);
+$item1 = new \AlexeyMakarov\IRetail\Item('Пополнение баланса', 10.00 , 1);
 
 $product = new \AlexeyMakarov\IRetail\Product();
 $product->addItem($item1);
 
 $number = time();
 
-$cash = new \AlexeyMakarov\IRetail\CashReceipt('API_HERE', 'LOGIN_HERE', $number, '2018-10-01 10:00:00', $product);
+$cash = new \AlexeyMakarov\IRetail\CashReceipt('API_HERE', 'LOGIN_HERE', $number, '2019-02-25 18:00:00', $product);
 $cash->setMode(\AlexeyMakarov\IRetail\CashReceipt::MODE_EMAIL)
     ->setType(\AlexeyMakarov\IRetail\CashReceipt::TYPE_PAYMENT)
-    ->setCustomerEmail('customer@localhost');
+    ->setCustomerEmail('cust@localhost');
 
-// $number = 'E-18-0123-012300-00001-00001';
-//
-// $cash = new \AlexeyMakarov\IRetail\CashReceipt('API_HERE', 'LOGIN_HERE', $number, '2018-05-08 15:00:00', $product);
+// $number = '1551169884';
+
+// $cash = new \AlexeyMakarov\IRetail\CashReceipt('API_HERE', 'LOGIN_HERE', $number, '2019-02-25 18:00:00', $product);
 // $cash->setMode(\AlexeyMakarov\IRetail\CashReceipt::MODE_EMAIL)
 //     ->setType(\AlexeyMakarov\IRetail\CashReceipt::TYPE_REFUND)
-//     ->setCustomerEmail('customer@localhost');
+//     ->setCustomerEmail('cust@localhost');
 
 $api = new \AlexeyMakarov\IRetail\ApiClient();
 
